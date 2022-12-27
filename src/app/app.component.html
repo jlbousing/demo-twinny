@@ -1,5 +1,5 @@
-<div class="w-full  md:p-8 md:relative">
-  <div class="bg-white flex justify-between md:justify-end">
+<div class="w-full md:p-8 md:relative">
+  <div class="bg-white fixed w-full flex justify-between md:justify-end md:relative">
 
     <div class="flex w-full p-6 shadow-sm justify-start md:hidden">
       <button (click)="openSidebar()">
@@ -20,7 +20,7 @@
     <sidebar *ngIf="isOpenSidebar" class="md:block"></sidebar>
     
     <div class="w-full p-6 mt-4">
-      <h1 class="text-center text-4xl font-bold mb-10 md:text-left">Hi, Jorge Luis Bou-saad</h1>
+      <h1 class="text-center text-4xl font-bold mb-10 md:text-left" *ngIf="username">Hi, {{ username }}</h1>
 
       <h6 class="">Overview</h6>
 

@@ -52,4 +52,17 @@ export class AppService {
       })
     ) 
   }
+
+  getUserName() {
+
+    return this.http.get<any[]>(
+      `${this.API_URL}/username`,
+      {observe: "response"}
+    ).pipe(
+      retry(3),
+      map((response: HttpResponse<any>) => {
+        return response;
+      })
+    ) 
+  }
 }

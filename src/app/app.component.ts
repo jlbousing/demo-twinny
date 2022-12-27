@@ -10,6 +10,7 @@ export class AppComponent implements OnInit{
   title = 'prueba-twinny';
   stats: any[] = [];
   isOpenSidebar: boolean = false;
+  username: string | null= null;
 
   constructor(private appServices: AppService) {
     if(window.screen.width > 768) {
@@ -22,6 +23,10 @@ export class AppComponent implements OnInit{
     this.appServices.getStats().subscribe((response: any) => {
       this.stats = response.body;
       console.log("probando stats ",this.stats);
+    });
+
+    this.appServices.getUserName().subscribe((response: any) => {
+      this.username = response.body.name;
     });
   }
 
