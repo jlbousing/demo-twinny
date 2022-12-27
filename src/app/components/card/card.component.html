@@ -1,4 +1,6 @@
-<div class="flex flex-row p-10 max-w-sm  bg-white rounded-2xl border border-gray-200 shadow-md text-black">
+<div class="flex flex-row p-10 max-w-sm  bg-white rounded-2xl border 
+          border-gray-200 shadow-md text-black"
+          *ngIf="stat">
   <div class="w-1/2">
     <div class="bg-gray-300 rounded-full w-[100px] h-[100px] flex justify-center">
       <span class="self-center">
@@ -8,7 +10,7 @@
   </div>
 
   <div class="w-1/2">
-    <h5 class="mb-2 text-4xl text-black font-bold tracking-tight">126k</h5>
-    <p class="font-normal text-black">subtitle</p>
+    <h5 class="mb-2 text-4xl text-black font-bold tracking-tight">{{ stat.qtx + stat.unit }}</h5>
+    <p class="font-normal text-black">{{ stat.subtitle }}</p>
   </div>
 </div>

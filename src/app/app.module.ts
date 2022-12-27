@@ -8,6 +8,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { GraphZoneComponent } from './components/graph-zone/graph-zone.component';
 import { NgChartsModule } from 'ng2-charts';
 import { LineChartComponent } from './components/line-chart/line-chart.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,11 +17,12 @@ import { LineChartComponent } from './components/line-chart/line-chart.component
     CardComponent,
     LayoutComponent,
     GraphZoneComponent,
-    LineChartComponent
+    LineChartComponent,
   ],
   imports: [
     BrowserModule,
-    NgChartsModule
+    NgChartsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
