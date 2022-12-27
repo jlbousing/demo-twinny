@@ -1,8 +1,10 @@
-<div class="w-full fixed md:p-8 md:relative">
+<div class="w-full  md:p-8 md:relative">
   <div class="bg-white flex justify-between md:justify-end">
 
-    <div class="flex p-6 shadow-sm justify-start md:hidden">
-      <i class="bi bi-list text-4xl"></i>
+    <div class="flex w-full p-6 shadow-sm justify-start md:hidden">
+      <button (click)="openSidebar()">
+        <i class="bi bi-list text-4xl"></i>
+      </button>
     </div>
 
     <div class="flex p-6 shadow-sm justify-end">
@@ -15,7 +17,7 @@
   </div>
 
   <div class="p-4 bg-white rounded-md flex">
-    <sidebar></sidebar>
+    <sidebar *ngIf="isOpenSidebar" class="md:block"></sidebar>
     
     <div class="w-full p-6 mt-4">
       <h1 class="text-center text-4xl font-bold mb-10 md:text-left">Hi, Jorge Luis Bou-saad</h1>

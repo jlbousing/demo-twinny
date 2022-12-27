@@ -9,8 +9,13 @@ import { AppService } from './services/app.service';
 export class AppComponent implements OnInit{
   title = 'prueba-twinny';
   stats: any[] = [];
+  isOpenSidebar: boolean = false;
 
-  constructor(private appServices: AppService) {}
+  constructor(private appServices: AppService) {
+    if(window.screen.width > 768) {
+      this.isOpenSidebar = true;
+    }
+  }
 
   ngOnInit(){
     
@@ -18,6 +23,10 @@ export class AppComponent implements OnInit{
       this.stats = response.body;
       console.log("probando stats ",this.stats);
     });
+  }
+
+  openSidebar() {
+    this.isOpenSidebar = !this.isOpenSidebar;
   }
 
 
