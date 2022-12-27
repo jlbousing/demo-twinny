@@ -1,4 +1,4 @@
-<div class="p-8">
+<div class="w-full fixed md:p-8 md:relative">
   <div class="bg-white flex justify-between md:justify-end">
 
     <div class="flex p-6 shadow-sm justify-start md:hidden">
@@ -15,7 +15,7 @@
   </div>
 
   <div class="p-4 bg-white rounded-md flex">
-    <!-- <sidebar></sidebar> -->
+    <sidebar></sidebar>
     
     <div class="w-full p-6 mt-4">
       <h1 class="text-center text-4xl font-bold mb-10 md:text-left">Hi, Jorge Luis Bou-saad</h1>
@@ -24,7 +24,7 @@
 
       <div class="mt-4 w-full flex flex-col md:flex-row md:justify-center">
 
-          <div class="w-full md:w-1/4"
+          <div class="w-full md:w-1/3"
                *ngFor="let stat of stats">
                <app-card [stat]="stat"></app-card>
           </div>
