@@ -2,14 +2,14 @@
           border-gray-200 shadow-md text-black"
           *ngIf="stat">
   <div class="w-full md:w-1/2">
-    <div class="bg-gray-300 m-auto rounded-full w-[100px] h-[100px] flex justify-center">
+    <div class="bg-gray-300 mx-auto rounded-full w-[100px] h-[100px] flex justify-center">
       <span class="self-center">
         <i class="bi bi-currency-euro text-6xl text-center text-purple-600"></i>
       </span>
     </div>
   </div>
 
-  <div class="w-full text-center md:w-1/2 md:text-left md:self-center">
+  <div class="w-full mt-4 text-center md:w-1/2 md:text-left md:self-center md:mt-0">
     <h5 class="mb-2 text-4xl text-black font-bold tracking-tight">{{ stat.qtx + stat.unit }}</h5>
     <p class="font-normal text-black">{{ stat.subtitle }}</p>
   </div>

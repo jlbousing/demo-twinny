@@ -1,37 +1,52 @@
-import { Component, ViewChild } from '@angular/core';
-import { Chart, ChartConfiguration, ChartEvent, ChartType } from 'chart.js';
+import { Component, ViewChild, OnInit } from '@angular/core';
+import { Chart, ChartConfiguration, ChartData, ChartDataset, ChartType } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
+import { ChartTypeRegistry, ScatterDataPoint, BubbleDataPoint } from 'chart.js';
 
 import { default as Annotation } from 'chartjs-plugin-annotation';
+
+import { AppService } from 'src/app/services/app.service';
 
 @Component({
   selector: 'line-chart',
   templateUrl: './line-chart.component.html',
   styleUrls: [ './line-chart.component.scss' ]
 })
-export class LineChartComponent {
+export class LineChartComponent implements OnInit {
   private newLabel? = 'New label';
+  isChartConfigured: boolean = false;
+  labels: any | null = null;
+  dataset: any[] | null = null;
 
-  constructor() {
-    Chart.register(Annotation)
+  lineChartData: any = {
+      datasets: [],
+      labels: []
   }
 
-  public lineChartData: ChartConfiguration['data'] = {
-    datasets: [
-      {
-        data: [ 60, 40, 25, 15, 10],
-        label: 'Series A',
-        backgroundColor: 'rgba(191,85,236)',
-        borderColor: 'rgba(148,159,177,1)',
-        pointBackgroundColor: 'rgba(148,159,177,1)',
-        pointBorderColor: '#fff',
-        pointHoverBackgroundColor: '#fff',
-        pointHoverBorderColor: 'rgba(148,159,177,0.8)',
-        fill: 'origin',
-      },
-    ],
-    labels: [ 'Page Visits', 'Product Views', 'Add to Cart', 'CheckOut', 'Purchase']
-  };
+  constructor(private appService: AppService) {
+    Chart.register(Annotation);
+  }
+
+  ngOnInit() {
+    
+    this.appService.getLabels()
+      .subscribe((response: any) => {
+        this.labels = response;
+        console.log("probando labels ",this.labels.body.labels);
+
+        this.appService.getDataset()
+          .subscribe((response: any) => {
+            this.dataset = response.body.map((item: ChartDataset) => item);
+            console.log("probando data ",this.dataset);
+
+            this.lineChartData.datasets = this.dataset?.map((item: ChartDataset) => item)
+            this.lineChartData.labels = this.labels.body.labels;
+
+            console.log("probando lineChartData ",this.lineChartData)
+            this.isChartConfigured = true;
+      });
+      });
+  }
 
   public lineChartOptions: ChartConfiguration['options'] = {
     elements: {
@@ -60,11 +75,7 @@ export class LineChartComponent {
 
   public lineChartType: ChartType = 'line';
 
-  @ViewChild(BaseChartDirective) chart?: BaseChartDirective;
-
-  private static generateNumber(i: number): number {
-    return Math.floor((Math.random() * (i < 2 ? 100 : 1000)) + 1);
-  }
+  //@ViewChild(BaseChartDirective) chart?: BaseChartDirective;
 
 
 }

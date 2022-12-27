@@ -26,4 +26,30 @@ export class AppService {
       })
     )
   }
+
+  getLabels() {
+
+    return this.http.get<any[]>(
+      `${this.API_URL}/graph-labels`,
+      {observe: "response"}
+    ).pipe(
+      retry(3),
+      map((response: HttpResponse<any>) => {
+        return response;
+      })
+    ) 
+  }
+
+  getDataset() {
+
+    return this.http.get<any[]>(
+      `${this.API_URL}/graph-stats`,
+      {observe: "response"}
+    ).pipe(
+      retry(3),
+      map((response: HttpResponse<any>) => {
+        return response;
+      })
+    ) 
+  }
 }
