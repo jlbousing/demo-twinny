@@ -19,14 +19,14 @@
   <div class="p-4 bg-white rounded-md flex">
     <sidebar *ngIf="isOpenSidebar" class="md:block"></sidebar>
     
-    <div class="w-full p-6 mt-4">
+    <div class="w-full p-6 mt-20 lg:mt-4">
       <h1 class="text-center text-4xl font-bold mb-10 md:text-left" *ngIf="username">Hi, {{ username }}</h1>
 
       <h6 class="">Overview</h6>
 
-      <div class="mt-4 w-full flex flex-col md:flex-row md:justify-center">
+      <div class="mt-4 w-full flex flex-col lg:flex-row lg:justify-center">
 
-          <div class="w-full md:w-1/3"
+          <div class="w-full lg:w-1/3"
                *ngFor="let stat of stats">
                <app-card [stat]="stat"></app-card>
           </div>
