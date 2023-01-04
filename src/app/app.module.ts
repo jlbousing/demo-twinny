@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -9,6 +10,10 @@ import { GraphZoneComponent } from './components/graph-zone/graph-zone.component
 import { NgChartsModule } from 'ng2-charts';
 import { LineChartComponent } from './components/line-chart/line-chart.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './pages/login/login.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { InputPasswordComponent } from './components/input-password/input-password.component';
+import { TwinnyButtonGradientComponent } from './components/twinny-button-gradient/twinny-button-gradient.component';
 
 @NgModule({
   declarations: [
@@ -18,9 +23,14 @@ import { HttpClientModule } from '@angular/common/http';
     LayoutComponent,
     GraphZoneComponent,
     LineChartComponent,
+    LoginComponent,
+    FooterComponent,
+    InputPasswordComponent,
+    TwinnyButtonGradientComponent,
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     NgChartsModule,
     HttpClientModule
   ],
