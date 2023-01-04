@@ -1,22 +1,28 @@
-<div id="login" class="bg-twinnyBackground w-screen h-screen">
+<div id="signup" class="bg-twinnyBackground w-screen h-screen">
     <div class="flex justify-center">
         <div class="bg-white absolute lg:form-shadow w-full    
                     lg:w-[560px] h-[600px] lg:top-40">
             <div class="flex flex-col justify-items-center">
                 <div class="w-full flex flex justify-center mt-16">
-                    <img src="assets/logo-twinny.png" 
-                        class="w-[269.77px] h-[60px]"/>
+                    <h2 class="text-center text-black font-extrabold text-5xl">Sign up</h2>
+                </div>
+
+                <div class="flex flex-col justify-items-center">
+                    <p class="text-twinnyGrayLight self-center mt-5">You’are very close to real insights.</p>
                 </div>
 
                 <div class="w-full flex justify-center mt-20 px-24">
 
                     <div class="flex flex-col items-center">
 
-                        <input-wrapper 
-                            [isWithIcon]="true"
-                            [iconClass]="'bi-person'"
-                            [placeholder]="'Username'">
-                        </input-wrapper>
+                        <div class="relative text-gray-600 focus-within:text-gray-400">
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+                                <i class="bi bi-person text-xl"></i>
+                            </span>
+                            <input
+                            class="w-full input-twinny py-4 text-sm text-white rounded-md pl-10 focus:outline-none focus:bg-white focus:text-gray-900" 
+                            placeholder="Username"/>
+                        </div>
                         
 
                         <div class="relative text-gray-600 focus-within:text-gray-400 mt-10">

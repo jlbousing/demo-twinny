@@ -14,6 +14,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { InputPasswordComponent } from './components/input-password/input-password.component';
 import { TwinnyButtonGradientComponent } from './components/twinny-button-gradient/twinny-button-gradient.component';
+import { SignupComponent } from './pages/signup/signup.component';
+import { InputWrapperComponent } from './components/input-wrapper/input-wrapper.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { TwinnyButtonGradientComponent } from './components/twinny-button-gradie
     FooterComponent,
     InputPasswordComponent,
     TwinnyButtonGradientComponent,
+    SignupComponent,
+    InputWrapperComponent,
   ],
   imports: [
     BrowserModule,
