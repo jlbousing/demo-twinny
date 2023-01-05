@@ -1,7 +1,7 @@
 <div id="signup" class="bg-twinnyBackground w-screen h-screen">
     <div class="flex justify-center">
         <div class="bg-white  lg:form-shadow w-full    
-                    lg:w-[560px] h-auto lg:top-40">
+                    lg:w-[39%] h-auto lg:top-40">
             <div class="flex flex-col justify-items-center">
                 <div class="w-full flex flex justify-center mt-16">
                     <h2 class="text-center text-black font-extrabold text-5xl">Sign up</h2>
@@ -11,40 +11,38 @@
                     <p class="text-twinnyGrayLight self-center mt-5">You’are very close to real insights.</p>
                 </div>
 
-                <div class="w-full flex justify-center mt-4 px-24 lg:mt-20">
+                <div class="w-full flex justify-center mt-4 px-8 lg:mt-20 lg:px-0">
 
-                    <div class="flex flex-col items-center">
+                    <div class="w-full lg:px-24 flex flex-col items-center">
 
                         <div class="w-full flex flex-col lg:flex-row lg:justify-between">
-                            <div class="w-full lg:w-[160px] lg:mt-0 lg:mx-4">
+                            <div class="w-full lg:w-1/2 lg:mt-0">
                                 <input-wrapper placeholder="Name"></input-wrapper>
                             </div>
 
-                            <div class="w-full mt-4 lg:w-[160px] lg:mt-0 lg:mx-4">
+                            <div class="w-full mt-4 lg:w-1/2 lg:mt-0 lg:mx-4">
                                 <input-wrapper placeholder="Company Name"></input-wrapper>
                             </div>
                         </div>
 
-                        <div class="mt-10">
+                        <div class="w-full mt-10">
                             <input-wrapper 
-                            [isWithIcon]="true"
-                            [iconClass]="'bi-person'"
-                            [placeholder]="'Username'">
+                                class="w-full px-24"
+                                [isWithIcon]="true"
+                                [iconClass]="'bi-person'"
+                                [placeholder]="'Username'">
                             </input-wrapper>
                         </div>
                         
 
-                        <div class="relative text-gray-600 focus-within:text-gray-400 mt-10">
-                            <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-                                <i class="bi bi-lock text-xl"></i>
-                            </span>
-                            <input-password></input-password>
+                        <div class="w-full">
+                            <input-password class="w-full px-24 mt-10"></input-password>
                         </div>
 
                         
-                        </div>
-                    
                     </div>
+                    
+                </div>
 
                 <twinny-button-gradient [text]="'Sign up'"></twinny-button-gradient>
 
