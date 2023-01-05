@@ -8,7 +8,8 @@ module.exports = {
       colors: {
         twinnyBbase: "#28292E",
         twinnyGrayLight: "#ADADB6",
-        intensePink: "#E849B2"
+        intensePink: "#E849B2",
+        smallText: "#8A94A6"
       },
       backgroundColor: {
         twinnyBackground: "#FAFBFC"

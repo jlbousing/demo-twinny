@@ -1,1 +1,43 @@
-<p>forgot works!</p>
+<div id="forgot" class="bg-twinnyBackground w-screen h-screen">
+    <div class="flex justify-center">
+        <div class="bg-white absolute lg:form-shadow w-full    
+                    lg:w-[560px] h-auto lg:top-40">
+            <div class="flex flex-col justify-items-center">
+                <div class="w-full flex flex justify-center mt-16">
+                    <img src="assets/logo-twinny.png" 
+                        class="w-[269.77px] h-[60px]"/>
+                </div>
+
+                <div class="w-full flex justify-center mt-20 px-24">
+
+                    <div class="flex flex-col items-center">
+
+                        <div class="flex flex-col items-center">
+                            <h3 class="font-extrabold text-2xl text-center">Forgot password?</h3>
+                            <p class="mt-5 text-smallText text-sm text-center">Enter your emails to recieve a reset link</p>
+                        </div>
+                        
+
+                        <input-wrapper
+                            class="mt-10" 
+                            [isWithIcon]="true"
+                            [iconClass]="'bi-envelope'"
+                            [placeholder]="'hello@loreakmedian.com'">
+                        </input-wrapper>
+
+                        
+                    </div>
+                    
+                </div>
+
+                <twinny-button-gradient [text]="'Log in'"></twinny-button-gradient>
+
+                <div class="w-full flex justify-center lg:justify-center lg:items-center mt-4 px-24">
+                    <p class="text-[#A216E4] font-medium text-base">Back to Log in</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <app-footer></app-footer>
+</div>
