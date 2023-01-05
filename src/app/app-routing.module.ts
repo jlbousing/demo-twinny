@@ -4,6 +4,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { ForgotComponent } from './pages/forgot/forgot.component';
 import { ResetComponent } from './pages/reset/reset.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 const routes: Routes = [
     {
@@ -21,6 +22,10 @@ const routes: Routes = [
     {
       path: 'reset',
       component: ResetComponent
+    },
+    {
+      path: 'dashboard',
+      component: DashboardComponent
     }
 ]; // sets up routes constant where you define your routes
 

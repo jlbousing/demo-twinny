@@ -18,6 +18,7 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { InputWrapperComponent } from './components/input-wrapper/input-wrapper.component';
 import { ForgotComponent } from './pages/forgot/forgot.component';
 import { ResetComponent } from './pages/reset/reset.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ResetComponent } from './pages/reset/reset.component';
     InputWrapperComponent,
     ForgotComponent,
     ResetComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
