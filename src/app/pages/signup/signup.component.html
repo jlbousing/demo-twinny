@@ -1,0 +1,61 @@
+<div id="signup" class="bg-twinnyBackground w-screen h-screen">
+    <div class="flex justify-center">
+        <div class="bg-white  lg:form-shadow w-full    
+                    lg:w-[560px] h-auto lg:top-40">
+            <div class="flex flex-col justify-items-center">
+                <div class="w-full flex flex justify-center mt-16">
+                    <h2 class="text-center text-black font-extrabold text-5xl">Sign up</h2>
+                </div>
+
+                <div class="flex flex-col justify-items-center">
+                    <p class="text-twinnyGrayLight self-center mt-5">You’are very close to real insights.</p>
+                </div>
+
+                <div class="w-full flex justify-center mt-4 px-24 lg:mt-20">
+
+                    <div class="flex flex-col items-center">
+
+                        <div class="w-full flex flex-col lg:flex-row lg:justify-between">
+                            <div class="w-full lg:w-[160px] lg:mt-0 lg:mx-4">
+                                <input-wrapper placeholder="Name"></input-wrapper>
+                            </div>
+
+                            <div class="w-full mt-4 lg:w-[160px] lg:mt-0 lg:mx-4">
+                                <input-wrapper placeholder="Company Name"></input-wrapper>
+                            </div>
+                        </div>
+
+                        <div class="mt-10">
+                            <input-wrapper 
+                            [isWithIcon]="true"
+                            [iconClass]="'bi-person'"
+                            [placeholder]="'Username'">
+                            </input-wrapper>
+                        </div>
+                        
+
+                        <div class="relative text-gray-600 focus-within:text-gray-400 mt-10">
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+                                <i class="bi bi-lock text-xl"></i>
+                            </span>
+                            <input-password></input-password>
+                        </div>
+
+                        
+                        </div>
+                    
+                    </div>
+
+                <twinny-button-gradient [text]="'Sign up'"></twinny-button-gradient>
+
+                <div class="w-full flex justify-start lg:justify-center lg:items-center mt-8 px-24 text-justify lg:px-0">
+                    <input checked id="checked-checkbox" type="checkbox" value="" class="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 rounded focus:ring-red-500 focus:ring-2">
+                    <label for="checked-checkbox" class="text-[#6F6F76] mx-4 text-[12px] font-normal text-twinnyBbase">By checking this checkbox and clicking “Log in” you agree to receive emails about Twinny products and services in accordance with our Privacy Policy and Terms and Conditions. You may opt out at any time. </label>
+                                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <app-footer></app-footer>
+</div>

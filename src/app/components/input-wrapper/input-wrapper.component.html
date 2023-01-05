@@ -1,0 +1,9 @@
+<div class="relative text-gray-600 focus-within:text-gray-400">
+    <span *ngIf="isWithIcon" class="absolute inset-y-0 left-0 flex items-center pl-2">
+        <i class="bi text-xl {{iconClass}}"></i>
+    </span>
+    <input
+    class="w-full input-twinny py-4 text-sm text-white rounded-md focus:outline-none focus:bg-white focus:text-gray-900"
+    [ngClass]="{'pl-10': isWithIcon}" 
+    [placeholder]="placeholder"/>
+</div>
