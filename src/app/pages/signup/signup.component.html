@@ -1,7 +1,7 @@
 <div id="signup" class="bg-twinnyBackground w-screen h-screen">
     <div class="flex justify-center">
-        <div class="bg-white absolute lg:form-shadow w-full    
-                    lg:w-[560px] h-[600px] lg:top-40">
+        <div class="bg-white  lg:form-shadow w-full    
+                    lg:w-[560px] h-auto lg:top-40">
             <div class="flex flex-col justify-items-center">
                 <div class="w-full flex flex justify-center mt-16">
                     <h2 class="text-center text-black font-extrabold text-5xl">Sign up</h2>
@@ -51,8 +51,10 @@
 
                 <twinny-button-gradient [text]="'Log in'"></twinny-button-gradient>
 
-                <div class="w-full flex justify-start lg:justify-center lg:items-center mt-2 px-24">
-                    <span class="text-[#A216E4] ml-1"> Back to Log in</span>
+                <div class="w-full flex justify-start lg:justify-center lg:items-center mt-8 px-24 text-justify lg:px-0">
+                    <input checked id="checked-checkbox" type="checkbox" value="" class="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 rounded focus:ring-red-500 focus:ring-2">
+                    <label for="checked-checkbox" class="text-[#6F6F76] mx-4 text-[12px] font-normal text-twinnyBbase">By checking this checkbox and clicking “Log in” you agree to receive emails about Twinny products and services in accordance with our Privacy Policy and Terms and Conditions. You may opt out at any time. </label>
+                                    
                 </div>
             </div>
         </div>
