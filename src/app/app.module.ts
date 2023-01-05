@@ -16,6 +16,7 @@ import { InputPasswordComponent } from './components/input-password/input-passwo
 import { TwinnyButtonGradientComponent } from './components/twinny-button-gradient/twinny-button-gradient.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { InputWrapperComponent } from './components/input-wrapper/input-wrapper.component';
+import { ForgotComponent } from './pages/forgot/forgot.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { InputWrapperComponent } from './components/input-wrapper/input-wrapper.
     TwinnyButtonGradientComponent,
     SignupComponent,
     InputWrapperComponent,
+    ForgotComponent,
   ],
   imports: [
     BrowserModule,

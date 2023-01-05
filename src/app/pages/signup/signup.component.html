@@ -11,17 +11,18 @@
                     <p class="text-twinnyGrayLight self-center mt-5">You’are very close to real insights.</p>
                 </div>
 
-                <div class="w-full flex justify-center mt-20 px-24">
+                <div class="w-full flex justify-center mt-4 px-24 lg:mt-20">
 
                     <div class="flex flex-col items-center">
 
-                        <div class="relative text-gray-600 focus-within:text-gray-400">
-                            <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-                                <i class="bi bi-person text-xl"></i>
-                            </span>
-                            <input
-                            class="w-full input-twinny py-4 text-sm text-white rounded-md pl-10 focus:outline-none focus:bg-white focus:text-gray-900" 
-                            placeholder="Username"/>
+                        <div class="w-full flex flex-col lg:flex-row lg:justify-between">
+                            <div class="w-full lg:w-[160px] lg:mt-0 lg:mx-4">
+                                <input-wrapper placeholder="Name"></input-wrapper>
+                            </div>
+
+                            <div class="w-full mt-4 lg:w-[160px] lg:mt-0 lg:mx-4">
+                                <input-wrapper placeholder="Company Name"></input-wrapper>
+                            </div>
                         </div>
                         
 
@@ -51,7 +52,7 @@
                 <twinny-button-gradient [text]="'Log in'"></twinny-button-gradient>
 
                 <div class="w-full flex justify-start lg:justify-center lg:items-center mt-2 px-24">
-                    <p class="text-twinnyGrayLight">Is your company new to Twinny? <span class="text-[#A216E4] ml-1"> Sign Up</span></p>
+                    <span class="text-[#A216E4] ml-1"> Back to Log in</span>
                 </div>
             </div>
         </div>

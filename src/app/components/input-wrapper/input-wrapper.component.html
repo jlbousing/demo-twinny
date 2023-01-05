@@ -3,6 +3,7 @@
         <i class="bi text-xl {{iconClass}}"></i>
     </span>
     <input
-    class="w-full input-twinny py-4 text-sm text-white rounded-md pl-10 focus:outline-none focus:bg-white focus:text-gray-900" 
+    class="w-full input-twinny py-4 text-sm text-white rounded-md focus:outline-none focus:bg-white focus:text-gray-900"
+    [ngClass]="{'pl-10': isWithIcon}" 
     [placeholder]="placeholder"/>
 </div>
