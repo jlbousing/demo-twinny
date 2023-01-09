@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 export class InputWrapperComponent {
 
   @Input("isWithIcon") isWithIcon: boolean = false;
+  @Input("colorIconClass") colorIconClass: string | null = null;
   @Input("iconClass") iconClass: string | null = null;
   @Input("placeholder") placeholder: string | null = null;
   
